@@ -17,7 +17,6 @@
         this.isim = "Name";
         }
 
-        
 ##### constructor            : Object'in oluşturduğu yapıcı metoda (işleve) erişmek için kullanılan özelliktir.  
 ##### __proto__              : Object'i oluşturan prototype object'ini elde etmek için kullanılan özelliktir.
 ##### hasOwnProperty         : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığını test etmek için kullanılır.
