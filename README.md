@@ -66,9 +66,28 @@
                               document.write("isimKontrolet");
 
 ##### isPrototypeOf          : Parametrik olarak verilen object'in prototype zincirinde, bir constructor'ın bulunup bulunmadığını test etmek için kullanılır.
-##### unwatch                : Belirtilen bir özelliğin değeri değiştirdiğinde, eklenmiş olan herhangi bir işlevi kaldırmak için kullanılır.
-##### propertyIsEnumerable   : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığının ve bu özelliğin numaralandırılabilir olup olmadığını test etmek için kullanılır. ( //true - false && numaralandırılıp numaralandırılamayacağını kontrol eder)
 
+                              var sonuc = new bilgiler();
+                              var kontrolEt = bilgiler.prototype.isPrototypeOf(sonuc); //true - false
+
+##### unwatch                : Belirtilen bir özelliğin değeri değiştirdiğinde, eklenmiş olan herhangi bir işlevi kaldırmak için kullanılır.
+##### propertyIsEnumerable   : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığının ve bu özelliğin numaralandırılabilir olup olmadığını test etmek için kullanılır. 
+                              //true - false && numaralandırılıp numaralandırılamayacağını(işlem sırası) kontrol eder
+
+                                function bilgiler() {
+                                    this.isim = "ISIM";
+                                    this.soyad = "SOYAD";
+                                    }
+                                    
+                                funciton.protype.bilgiler = function() 
+                                    {
+                                    this.ifade = "Merhaba";
+                                    }
+                                var sonuc = new bilgiler();
+                                sonuc.__proto__.islem();  //nesnenin proto'suna ilaşmak için değere ulaşmadan önce çalıştırmak gerekir.
+                                
+                                var ifadeYaz = sonuc.__proto__.ifade; 
+                                document.write(ifadeYaz);
                  
 ##### toLocaleString         : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (Location)
 ##### toString               : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (No Location)
