@@ -48,12 +48,10 @@
                                     
                                 funciton.protype.bilgiler = function() 
                                     {
-                                    this.birinciDegiskeKendisi = birinciDegisken; 
-                                    this.ikinciDegiskenKendisi = ikinciDegisken; 
-                                    this.ucuncuDegiskenKendisi = ucuncuDegisken; 
+                                    this.ifade = "Merhaba";
                                     }
                                 var sonuc = new bilgiler();
-                                sonuc.__proto__.islem = function(); 
+                                sonuc.__proto__.islem(); 
                                 
                                 var ifadeYaz = sonuc.__proto__.ifade;
                                 document.write(ifadeYaz);
