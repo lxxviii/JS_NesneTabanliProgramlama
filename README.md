@@ -17,6 +17,13 @@
         this.isim = "Name";
         }
 
+For In : var bilgiler = { isim : "isim", soyisim:"soyisim" }
+
+for (let sonuc in bilgiler) // isim isim soyisim soyisim => [] //Eğer bir fonksiyon varsa onun içindeki değerleri dönüyor. {
+if(sonuc !== "fonksiyonKey") { let ozellik = sonuc; let deger = bilgier[sonuc]; document.write(ozellik + " " + deger); } }
+
+PROTOTYPE : funciton bilgiler (birinciDegisken, ikinciDegisken, ucuncuDegisken) { this.birinciDegiskeKendisi = birinciDegisken; this.ikinciDegiskenKendisi = ikinciDegisken; this.ucuncuDegiskenKendisi = ucuncuDegisken; } bilgiler.prototype.islem = function() { return this.birinciDegiskeKendisi + this.ikinciDegiskenKendisi + this.ucuncuDegiskenKendisi; } var sonuc = new bilgiler("Birinci Değişken", "İkinci Değişken", "Üçüncü Değişken"); var yazdir = sonuc.islem(); document.write(yazdir);
+
 ##### constructor            : Object'in oluşturduğu yapıcı metoda (işleve) erişmek için kullanılan özelliktir.  
 ##### __proto__              : Object'i oluşturan prototype object'ini elde etmek için kullanılan özelliktir.
 ##### hasOwnProperty         : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığını test etmek için kullanılır.
@@ -28,3 +35,5 @@
 ##### toSource               : Bir object'in kaynak kodunu temsil edene halini döndürmek için kullanılır.
 ##### valueOf                : Bir object'in temel değerini elde etmek için kullanılır.
 ##### watch                  : Belirtilen bir özelliğin değeri değiştiğinde, çalıştırılacak herhangi bir işlevi eklemek için kullanılır.
+
+Değişken içindeki Veriyi Silmek için : delete degisken;
