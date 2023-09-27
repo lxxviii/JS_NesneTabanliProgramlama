@@ -1,4 +1,4 @@
-#### JS_NesneTabanliProgramlama
+ #### JS_NesneTabanliProgramlama
 
     var bilgiler = { isim:"Name" }; //Standart Kullanım
 
@@ -63,6 +63,7 @@
                                   isim = "ISIM"; soyad="SOYAD";
                               }
                               var isimKontrolet = bilgiler.hasOwnProperty("isim"); //true
+                              document.write("isimKontrolet");
 
 ##### isPrototypeOf          : Parametrik olarak verilen object'in prototype zincirinde, bir constructor'ın bulunup bulunmadığını test etmek için kullanılır.
 ##### unwatch                : Belirtilen bir özelliğin değeri değiştirdiğinde, eklenmiş olan herhangi bir işlevi kaldırmak için kullanılır.
