@@ -36,10 +36,16 @@
     var yazdir = sonuc.islem(); 
     document.write(yazdir);
 
-##### constructor            : Object'in oluşturduğu yapıcı metoda (işleve) erişmek için kullanılan özelliktir.  
+##### constructor            : Object'in oluşturduğu yapıcı metoda (işleve) erişmek için kullanılan özelliktir. 
+                               // Nesnenin constructor'ını elde etmek için kullanılır ve constructor'ın değerini döndürür. Ayrıca aynı zamanda kontrol işlemleri içinde kullanılabilir.
+
+                               function bilgiler() { isim:"ISIM"; }
+                               var sonuc = new bilgiler();
+                               var islem = sonuc.constructor; 
+                               document.write(islem);  
 
 ##### __proto__              : Object'i oluşturan prototype object'ini elde etmek için kullanılan özelliktir. 
-                               (Bir nesnenin prototype nesnesini elde etmek için kullanılır ve prototype nesnesi içerisindeki değere ulaşarak değeri geriye döndürür)
+                               //Bir nesnenin prototype nesnesini elde etmek için kullanılır ve prototype nesnesi içerisindeki değere ulaşarak değeri geriye döndürür
 
                                 function bilgiler() {
                                     this.isim = "ISIM";
@@ -71,6 +77,8 @@
                               var kontrolEt = bilgiler.prototype.isPrototypeOf(sonuc); //true - false
 
 ##### unwatch                : Belirtilen bir özelliğin değeri değiştirdiğinde, eklenmiş olan herhangi bir işlevi kaldırmak için kullanılır.
+                               // Sadece Mozilla'da çalışır.   degisken.unwatch("object.ozelligi");
+                               
 ##### propertyIsEnumerable   : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığının ve bu özelliğin numaralandırılabilir olup olmadığını test etmek için kullanılır. 
                               //true - false && numaralandırılıp numaralandırılamayacağını(işlem sırası) kontrol eder
 
@@ -89,10 +97,26 @@
                                 var ifadeYaz = sonuc.__proto__.ifade; 
                                 document.write(ifadeYaz);
                  
-##### toLocaleString         : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (Location)
+##### toLocaleString         : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (Location)  
+#####                          Nesne prototype özelliği kullanarak değer ataması yapılabilir.
+
+
 ##### toString               : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (No Location)
+
+
 ##### toSource               : Bir object'in kaynak kodunu temsil edene halini döndürmek için kullanılır.
 ##### valueOf                : Bir object'in temel değerini elde etmek için kullanılır.
+
 ##### watch                  : Belirtilen bir özelliğin değeri değiştiğinde, çalıştırılacak herhangi bir işlevi eklemek için kullanılır.
+                               // Sadece Mozilla'da çalışır.  degisken.watch("object.ozelligi", "ozellikAdi, eskiDeger, yeniDeger") {  -- çeşitli işlemler -- };
+
+#####instanceof              : Bir nesnenin constructor'ının doğruluğunu kontrol ederek boolean veri türünde sonucu geriye döndürür.
+
+                               function demobir() { }
+                               function demoiki() { }
+                                 
+                               var sonucbir = new demobir();
+                               var islemInstanceof = sonucbir instanceof demobir; //true - false
+                               document.write(islembir);
 
 Değişken içindeki Veriyi Silmek için : delete degisken;
