@@ -98,7 +98,11 @@
                                 document.write(ifadeYaz);
                  
 ##### toLocaleString         : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (Location)  
+                                      var deger = 1000; var sonuc = deger.toLocaleString ("tr-TR", { style:"currency", currency:"TRY", maximumSignificantDigits: Deger }); 
+                                      // Deger = Maximum alabileceği değer sayısını girer. En fazla 21 karaktere kadar alabilir.
 
+                                      var deger = 1000; var sonuc = deger.toLocaleString ("tr-TR", { style:"currency", currency:"TRY", minimumSignificantDigits: Deger });
+                                      // Deger = Minimum alabileceği değer sayısını girer.  En fazla 21 karaktere kadar alabilir. --Minimum karaktere ulaşılamazsa virgülden sonra sıfır ekler.--
 
 ##### toString               : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (No Location)
 #####                          Nesne prototype özelliği kullanarak değer ataması yapılabilir.
@@ -108,7 +112,13 @@
                                      var sonuc = bilgiler.toString();
 
 ##### toSource               : Bir object'in kaynak kodunu temsil edene halini döndürmek için kullanılır.
+                               // Sadece Mozilla'da çalışır. 
+
 ##### valueOf                : Bir object'in temel değerini elde etmek için kullanılır.
+                               function islem(sayi){ this.deger = sayi; }
+                               var nesnemi = new islem(50);
+                               var sonuc = nesnemiz.valueOf();
+                               document.write(sonuc);
 
 ##### watch                  : Belirtilen bir özelliğin değeri değiştiğinde, çalıştırılacak herhangi bir işlevi eklemek için kullanılır.
                                // Sadece Mozilla'da çalışır.  degisken.watch("object.ozelligi", "ozellikAdi, eskiDeger, yeniDeger") {  -- çeşitli işlemler -- };
