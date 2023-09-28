@@ -98,11 +98,14 @@
                                 document.write(ifadeYaz);
                  
 ##### toLocaleString         : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (Location)  
-#####                          Nesne prototype özelliği kullanarak değer ataması yapılabilir.
 
 
 ##### toString               : Bir object'in karakter dizesi olarak temsil eden halini döndürmek için kullanılır. (No Location)
-
+#####                          Nesne prototype özelliği kullanarak değer ataması yapılabilir.
+                                     function islem() { document.write("Text Mesajı");  }
+                                     islem.prototype.toString = function() { document.write("Diğer Text Mesajı"); }
+                                     var bilgiler = new islem();
+                                     var sonuc = bilgiler.toString();
 
 ##### toSource               : Bir object'in kaynak kodunu temsil edene halini döndürmek için kullanılır.
 ##### valueOf                : Bir object'in temel değerini elde etmek için kullanılır.
