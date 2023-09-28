@@ -64,7 +64,8 @@
 
 
 
-##### hasOwnProperty         : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığını test etmek için kullanılır. //true - false
+##### hasOwnProperty         : Bir object'in parametrik olarak girilen özelliğinin kullanılıp kullanılmadığını test etmek için kullanılır. 
+                              //true - false
                               var bilgiler= {
                                   isim = "ISIM"; soyad="SOYAD";
                               }
@@ -72,7 +73,6 @@
                               document.write("isimKontrolet");
 
 ##### isPrototypeOf          : Parametrik olarak verilen object'in prototype zincirinde, bir constructor'ın bulunup bulunmadığını test etmek için kullanılır.
-
                               var sonuc = new bilgiler();
                               var kontrolEt = bilgiler.prototype.isPrototypeOf(sonuc); //true - false
 
@@ -116,7 +116,8 @@
 
 ##### valueOf                : Bir object'in temel değerini elde etmek için kullanılır.
                                function islem(sayi){ this.deger = sayi; }
-                               var nesnemi = new islem(50);
+                               ##### islem.prototype.valueOf = function(){ return this.deger; }
+                               var nesnemiz = new islem(50);
                                var sonuc = nesnemiz.valueOf();
                                document.write(sonuc);
 
