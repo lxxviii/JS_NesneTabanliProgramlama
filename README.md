@@ -36,6 +36,20 @@
     var yazdir = sonuc.islem(); 
     document.write(yazdir);
 
+-------------------------------------------------------------------------------------------------------
+    
+    Çapa İçerikleri  <span id="capaIcerikAlani"> </span>
+    
+    var sonuc    = document.anchors;
+    var degerler = [];
+
+    for( var baslangic=0; baslangic< sonuc.length; baslangic++){
+       var islemSonucu      = sonuc[baslangic].innerHTML;
+       degerler[baslangic]  = islemSonucu;
+    }
+    document.getElementById("capaIcerikleriAlani").innerHTML = degerler;
+-------------------------------------------------------------------------------------------------------
+
 ##### constructor            : Object'in oluşturduğu yapıcı metoda (işleve) erişmek için kullanılan özelliktir. 
                                // Nesnenin constructor'ını elde etmek için kullanılır ve constructor'ın değerini döndürür. Ayrıca aynı zamanda kontrol işlemleri içinde kullanılabilir.
 
